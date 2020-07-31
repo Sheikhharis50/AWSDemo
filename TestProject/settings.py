@@ -23,10 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'p*kmcoj2o4%$*x^m7u)rs20$j1@8=ca!6ejgw!-6v9pgk+@&-s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True
+# ALLOWED_HOSTS = ['127.0.0.1']
+
 DEBUG = False
-
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -74,22 +75,22 @@ WSGI_APPLICATION = 'TestProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER': 'django',
-#         'PASSWORD': 'django',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase.db',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'AWSDemo',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
+        'PORT': '3000',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'mydatabase.db',
+#     }
+# }
 
 
 # Password validation
